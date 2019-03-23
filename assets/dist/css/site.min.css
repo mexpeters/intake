@@ -290,6 +290,10 @@ img {
           width: auto;
           float: right;
           margin-right: 6.25rem; }
+        .container.design .subject .right.visual:after {
+          content: "// CREATE AESTHETICALLY APPEALING DESIGNS";
+          left: 9.375rem;
+          max-width: 26.25rem; }
   .container.photography {
     position: relative; }
     .container.photography .subject {

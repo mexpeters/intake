@@ -112,6 +112,14 @@ img {
 					float: right;
 					margin-right: 6.25rem;
 				}
+
+				&.visual {
+					&:after {
+						content: "// CREATE AESTHETICALLY APPEALING DESIGNS";
+						left: 9.375rem;
+    					max-width: 26.25rem;
+					}
+				}
 			}
 		}
 	}
