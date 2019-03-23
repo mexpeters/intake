@@ -29,6 +29,28 @@ img {
 	width: 100%;
 }
 
+.info {
+	position: absolute;
+	top: .625rem;
+	left: .625rem;
+
+	.name,
+	.date {
+		display: inline-block;
+		margin: 0;
+	}
+
+	.name {
+		font-family: 'Oswald', sans-serif;
+		font-weight: 500;
+	}
+
+	.date {
+		font-family: 'Oswald', sans-serif;
+		font-weight: 200;
+	}
+}
+
 .container {
 	padding: 50px 0;
 
@@ -50,11 +72,16 @@ img {
 					position: absolute;
 					width: auto;
 					height: 100%;
-					cursor: pointer;
 
 					&:last-of-type {
 						bottom: -1.25rem;
 						left: 3.125rem;
+					}
+				}
+
+				&.visual {
+					&:after {
+						content: "// TURNING DESIGN INTO REALITY";
 					}
 				}
 			}
@@ -78,7 +105,6 @@ img {
 			.right {
 				flex: 0 0 60%;
 				position: relative;
-				cursor: pointer;
 
 				.image {
 					max-height: 20.625rem;
@@ -98,28 +124,6 @@ img {
 			.left {
 				flex: 0 0 30%;
 				position: relative;
-				cursor: pointer;
-
-				&:after {
-					content: "Image";
-					font-family: 'Oswald', sans-serif;
-					font-weight: 500;
-					background: black;
-					padding: .625rem;
-					position: absolute;
-					top: 0;
-					left: .625rem;
-					color: red;
-					z-index: 10;
-					font-size: 2.5rem;
-					display: none;
-				}
-
-				&:hover {
-					&:after {
-						display: block;
-					}
-				}
 
 				.image {
 					&:first-of-type {
@@ -145,7 +149,12 @@ img {
 			.right {
 				flex: 0 0 30%;
 				position: relative;
-				cursor: pointer;
+
+				&.visual {
+					&:after {
+						content: "// PERFECT IMAGES MAKE PERFECT CONTENT";
+					}
+				}
 			}
 		}
 	}
@@ -171,7 +180,6 @@ img {
 			.right {
 				flex: 0 0 60%;
 				position: relative;
-				cursor: pointer;
 
 				.image {
 					&:last-of-type {
@@ -186,10 +194,16 @@ img {
 					width: auto;
 					height: 26.875rem;
 					z-index: -1;
-					// right: -3.75rem;
 					right: 0;
 					top: -22.5rem;
 					transform: rotate(5deg);
+				}
+
+				&.visual {
+					&:after {
+						content: "// DESIGN WIREFRAMES & PROTOTYPES";
+						top: 6.25rem;
+					}
 				}
 			}
 		}
@@ -207,7 +221,38 @@ img {
 			.right {
 				flex: 0 0 60%;
 				position: relative;
-				cursor: pointer;
+
+				&.visual {
+					&:after {
+						content: "// CREATE MEANINGFULL EXPERIENCES";
+						bottom: 6.25rem;
+						top: unset;
+					}
+				}
+			}
+		}
+	}
+
+	.visual {
+		cursor: pointer;
+
+		&:after {
+			font-family: 'Oswald', sans-serif;
+			font-weight: 500;
+			background: black;
+			padding: .625rem;
+			position: absolute;
+			top: .9375rem;
+			left: .625rem;
+			color: red;
+			z-index: 10;
+			font-size: 2.5rem;
+			display: none;
+		}
+
+		&:hover {
+			&:after {
+				display: block;
 			}
 		}
 	}

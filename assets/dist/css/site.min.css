@@ -237,6 +237,21 @@ img {
   display: block;
   width: 100%; }
 
+.info {
+  position: absolute;
+  top: .625rem;
+  left: .625rem; }
+  .info .name,
+  .info .date {
+    display: inline-block;
+    margin: 0; }
+  .info .name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500; }
+  .info .date {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200; }
+
 .container {
   padding: 50px 0; }
   .container.dev .subject {
@@ -251,11 +266,12 @@ img {
       .container.dev .subject .right .image {
         position: absolute;
         width: auto;
-        height: 100%;
-        cursor: pointer; }
+        height: 100%; }
         .container.dev .subject .right .image:last-of-type {
           bottom: -1.25rem;
           left: 3.125rem; }
+      .container.dev .subject .right.visual:after {
+        content: "// TURNING DESIGN INTO REALITY"; }
   .container.design {
     padding-top: 9.375rem;
     padding-bottom: 6.25rem; }
@@ -268,8 +284,7 @@ img {
         margin-top: 3.125rem; }
       .container.design .subject .right {
         flex: 0 0 60%;
-        position: relative;
-        cursor: pointer; }
+        position: relative; }
         .container.design .subject .right .image {
           max-height: 20.625rem;
           width: auto;
@@ -281,23 +296,7 @@ img {
       display: flex; }
       .container.photography .subject .left {
         flex: 0 0 30%;
-        position: relative;
-        cursor: pointer; }
-        .container.photography .subject .left:after {
-          content: "Image";
-          font-family: 'Oswald', sans-serif;
-          font-weight: 500;
-          background: black;
-          padding: .625rem;
-          position: absolute;
-          top: 0;
-          left: .625rem;
-          color: red;
-          z-index: 10;
-          font-size: 2.5rem;
-          display: none; }
-        .container.photography .subject .left:hover:after {
-          display: block; }
+        position: relative; }
         .container.photography .subject .left .image:first-of-type {
           margin-top: 1.5625rem; }
         .container.photography .subject .left .letter {
@@ -312,8 +311,9 @@ img {
         margin: 0 3.125rem; }
       .container.photography .subject .right {
         flex: 0 0 30%;
-        position: relative;
-        cursor: pointer; }
+        position: relative; }
+        .container.photography .subject .right.visual:after {
+          content: "// PERFECT IMAGES MAKE PERFECT CONTENT"; }
   .container.ui .subject {
     display: flex; }
     .container.ui .subject .left {
@@ -328,8 +328,7 @@ img {
         transform: rotate(-2deg); }
     .container.ui .subject .right {
       flex: 0 0 60%;
-      position: relative;
-      cursor: pointer; }
+      position: relative; }
       .container.ui .subject .right .image:last-of-type {
         position: absolute;
         bottom: -5.625rem;
@@ -342,6 +341,9 @@ img {
         right: 0;
         top: -22.5rem;
         transform: rotate(5deg); }
+      .container.ui .subject .right.visual:after {
+        content: "// DESIGN WIREFRAMES & PROTOTYPES";
+        top: 6.25rem; }
   .container.ux .subject {
     display: flex; }
     .container.ux .subject .left {
@@ -349,8 +351,27 @@ img {
       margin-right: 3.125rem; }
     .container.ux .subject .right {
       flex: 0 0 60%;
-      position: relative;
-      cursor: pointer; }
+      position: relative; }
+      .container.ux .subject .right.visual:after {
+        content: "// CREATE MEANINGFULL EXPERIENCES";
+        bottom: 6.25rem;
+        top: unset; }
+  .container .visual {
+    cursor: pointer; }
+    .container .visual:after {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      background: black;
+      padding: .625rem;
+      position: absolute;
+      top: .9375rem;
+      left: .625rem;
+      color: red;
+      z-index: 10;
+      font-size: 2.5rem;
+      display: none; }
+    .container .visual:hover:after {
+      display: block; }
 
 ul[class*='menu-'] {
   margin: 0;
