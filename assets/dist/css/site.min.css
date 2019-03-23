@@ -243,6 +243,7 @@ img {
     display: flex; }
     .container.dev .subject .left {
       flex: 0 0 40%;
+      margin-top: -3.125rem;
       margin-right: 3.125rem; }
     .container.dev .subject .right {
       flex: 0 0 60%;
@@ -250,7 +251,8 @@ img {
       .container.dev .subject .right .image {
         position: absolute;
         width: auto;
-        height: 100%; }
+        height: 100%;
+        cursor: pointer; }
         .container.dev .subject .right .image:last-of-type {
           bottom: -1.25rem;
           left: 3.125rem; }
@@ -262,10 +264,12 @@ img {
       flex-direction: row-reverse; }
       .container.design .subject .left {
         flex: 0 0 40%;
-        margin-right: 6.25rem; }
+        margin-right: 6.25rem;
+        margin-top: 3.125rem; }
       .container.design .subject .right {
         flex: 0 0 60%;
-        position: relative; }
+        position: relative;
+        cursor: pointer; }
         .container.design .subject .right .image {
           max-height: 20.625rem;
           width: auto;
@@ -276,7 +280,26 @@ img {
     .container.photography .subject {
       display: flex; }
       .container.photography .subject .left {
-        flex: 0 0 30%; }
+        flex: 0 0 30%;
+        position: relative;
+        cursor: pointer; }
+        .container.photography .subject .left:after {
+          content: "Image";
+          font-family: 'Oswald', sans-serif;
+          font-weight: 500;
+          background: black;
+          padding: .625rem;
+          position: absolute;
+          top: 0;
+          left: .625rem;
+          color: red;
+          z-index: 10;
+          font-size: 2.5rem;
+          display: none; }
+        .container.photography .subject .left:hover:after {
+          display: block; }
+        .container.photography .subject .left .image:first-of-type {
+          margin-top: 1.5625rem; }
         .container.photography .subject .left .letter {
           position: absolute;
           width: auto;
@@ -289,7 +312,8 @@ img {
         margin: 0 3.125rem; }
       .container.photography .subject .right {
         flex: 0 0 30%;
-        position: relative; }
+        position: relative;
+        cursor: pointer; }
   .container.ui .subject {
     display: flex; }
     .container.ui .subject .left {
@@ -304,7 +328,8 @@ img {
         transform: rotate(-2deg); }
     .container.ui .subject .right {
       flex: 0 0 60%;
-      position: relative; }
+      position: relative;
+      cursor: pointer; }
       .container.ui .subject .right .image:last-of-type {
         position: absolute;
         bottom: -5.625rem;
@@ -324,7 +349,8 @@ img {
       margin-right: 3.125rem; }
     .container.ux .subject .right {
       flex: 0 0 60%;
-      position: relative; }
+      position: relative;
+      cursor: pointer; }
 
 ul[class*='menu-'] {
   margin: 0;

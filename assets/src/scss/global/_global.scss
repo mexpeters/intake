@@ -28,7 +28,7 @@ img {
 	display: block;
 	width: 100%;
 }
-// background-color: #d3d3d3;
+
 .container {
 	padding: 50px 0;
 
@@ -38,6 +38,7 @@ img {
 
 			.left {
 				flex: 0 0 40%;
+				margin-top: -3.125rem;
 				margin-right: 3.125rem;
 			}
 
@@ -49,6 +50,7 @@ img {
 					position: absolute;
 					width: auto;
 					height: 100%;
+					cursor: pointer;
 
 					&:last-of-type {
 						bottom: -1.25rem;
@@ -70,11 +72,13 @@ img {
 			.left {
 				flex: 0 0 40%;
 				margin-right: 6.25rem;
+				margin-top: 3.125rem;
 			}
 
 			.right {
 				flex: 0 0 60%;
 				position: relative;
+				cursor: pointer;
 
 				.image {
 					max-height: 20.625rem;
@@ -93,6 +97,35 @@ img {
 
 			.left {
 				flex: 0 0 30%;
+				position: relative;
+				cursor: pointer;
+
+				&:after {
+					content: "Image";
+					font-family: 'Oswald', sans-serif;
+					font-weight: 500;
+					background: black;
+					padding: .625rem;
+					position: absolute;
+					top: 0;
+					left: .625rem;
+					color: red;
+					z-index: 10;
+					font-size: 2.5rem;
+					display: none;
+				}
+
+				&:hover {
+					&:after {
+						display: block;
+					}
+				}
+
+				.image {
+					&:first-of-type {
+						margin-top: 1.5625rem;
+					}
+				}
 
 				.letter {
 					position: absolute;
@@ -112,6 +145,7 @@ img {
 			.right {
 				flex: 0 0 30%;
 				position: relative;
+				cursor: pointer;
 			}
 		}
 	}
@@ -137,6 +171,7 @@ img {
 			.right {
 				flex: 0 0 60%;
 				position: relative;
+				cursor: pointer;
 
 				.image {
 					&:last-of-type {
@@ -172,14 +207,7 @@ img {
 			.right {
 				flex: 0 0 60%;
 				position: relative;
-
-				.image {
-					// &:last-of-type {
-					// 	position: absolute;
-					// 	bottom: -5.625rem;
-					// 	left: -9.375rem;
-					// }
-				}
+				cursor: pointer;
 			}
 		}
 	}
