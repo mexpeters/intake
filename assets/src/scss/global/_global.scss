@@ -94,7 +94,6 @@ img {
 
 		.subject {
 			display: flex;
-			flex-direction: row-reverse;
 
 			.left {
 				flex: 0 0 40%;
@@ -120,6 +119,10 @@ img {
     					max-width: 26.25rem;
 					}
 				}
+			}
+
+			@media (min-width: 800px) {
+				flex-direction: row-reverse;
 			}
 		}
 	}
@@ -255,13 +258,27 @@ img {
 			color: red;
 			z-index: 10;
 			font-size: 2.5rem;
-			display: none;
+			display: block;
+
+			@media (min-width: 800px) {
+				display: none;
+			}
 		}
 
-		&:hover {
-			&:after {
-				display: block;
+		@media (min-width: 800px) {
+			&:hover {
+				&:after {
+					display: block;
+				}
 			}
+		}
+	}
+
+	.subject {
+		flex-direction: column;
+
+		@media (min-width: 800px) {
+			flex-direction: row;
 		}
 	}
 }

@@ -276,8 +276,7 @@ img {
     padding-top: 9.375rem;
     padding-bottom: 6.25rem; }
     .container.design .subject {
-      display: flex;
-      flex-direction: row-reverse; }
+      display: flex; }
       .container.design .subject .left {
         flex: 0 0 40%;
         margin-right: 6.25rem;
@@ -294,6 +293,9 @@ img {
           content: "// CREATE AESTHETICALLY APPEALING DESIGNS";
           left: 9.375rem;
           max-width: 26.25rem; }
+      @media (min-width: 800px) {
+        .container.design .subject {
+          flex-direction: row-reverse; } }
   .container.photography {
     position: relative; }
     .container.photography .subject {
@@ -373,9 +375,18 @@ img {
       color: red;
       z-index: 10;
       font-size: 2.5rem;
-      display: none; }
-    .container .visual:hover:after {
       display: block; }
+      @media (min-width: 800px) {
+        .container .visual:after {
+          display: none; } }
+    @media (min-width: 800px) {
+      .container .visual:hover:after {
+        display: block; } }
+  .container .subject {
+    flex-direction: column; }
+    @media (min-width: 800px) {
+      .container .subject {
+        flex-direction: row; } }
 
 ul[class*='menu-'] {
   margin: 0;
